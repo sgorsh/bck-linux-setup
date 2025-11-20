@@ -1,7 +1,7 @@
 {
 	"name": "bck-linux-setup",
 	"version": "0.1.0",
-	"description": "CLI tool for executing commands on remote Beckhoff RT Linux® devices via SSH with APT proxy support",
+	"description": "CLI tool for executing commands on remote Beckhoff RT Linux\u00c2\u00ae devices via SSH with APT proxy support",
 	"main": "src/index.ts",
 	"bin": {
 		"bck-linux-setup": "src/index.ts"
@@ -31,7 +31,6 @@
 	},
 	"files": [
 		"src/**/*",
-		"README.md",
 		"LICENSE"
 	],
 	"engines": {

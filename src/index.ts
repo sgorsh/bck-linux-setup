@@ -198,8 +198,8 @@ if (values["run-commands"]) {
 		: userCommands;
 } else {
 	// Interactive mode
-	const mode = aptProxy ? "with local APT proxy" : "interactive mode";
-	console.log(`${colors.cyan}Connecting to ${colors.bold}${finalUsername}@${host}${colors.reset}${colors.cyan} in ${mode}${colors.reset}`);
+	const proxyMsg = aptProxy ? " with local APT proxy" : "";
+	console.log(`${colors.cyan}Connecting to ${colors.bold}${finalUsername}@${host}${colors.reset}${colors.cyan} in interactive mode${proxyMsg}${colors.reset}`);
 
 	if (aptProxy) {
 		// Interactive with proxy - setup proxy, then drop to shell
