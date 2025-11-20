@@ -29,10 +29,10 @@ curl -fsSL https://bun.sh/install | bash
 powershell -c "irm bun.sh/install.ps1|iex"
 ```
 
-### Install from GitHub
+### Install/upgrade from GitHub
 
 ```bash
-bun install -g git+https://github.com/sgorsh/bck-linux-setup.git
+bun install -g -f https://github.com/sgorsh/bck-linux-setup#v0.1.1
 ```
 
 ### Install from Source
@@ -41,6 +41,12 @@ bun install -g git+https://github.com/sgorsh/bck-linux-setup.git
 git clone https://github.com/sgorsh/bck-linux-setup.git
 cd bck-linux-setup
 bun install -g .
+```
+
+### Uninstall
+
+```bash
+bun remove -g bck-linux-setup
 ```
 
 ## Requirements
@@ -190,6 +196,7 @@ cp config.example.json config.json
 | `--run-commands` | - | - | - | Execute commands from config and exit |
 | `--config <path>` | - | - | `config.json` | Config file path |
 | `--bck-username` | - | - | - | myBeckhoff email for proxy auth |
+| `--version` | - | - | - | Show version number |
 | `--help` | - | - | - | Show help |
 
 **Note:** Don't mix CLI args and config for the same parameter (causes conflict error).
@@ -206,6 +213,7 @@ Options:
   --run-commands           Execute commands from config
   --config <path>          Config file path (default: config.json)
   --bck-username <email>   myBeckhoff email (env: BCK_USERNAME)
+  --version                Show version number
   --help                   Show help
 
 Modes:

@@ -4,6 +4,7 @@ import { resolve } from "path";
 import { AptProxy, PROXY_PORT } from "./apt-proxy";
 import type { SetupDeviceConfig } from "./types";
 import { colors, promptForInput, promptForPassword, checkSshClientInstalled } from "./utils";
+import packageJson from "../package.json";
 
 function printHelp(): never {
 	console.log(`Execute commands on remote Beckhoff devices via SSH with APT proxy support
@@ -24,6 +25,7 @@ Options:
   --run-commands    Execute commands from config file (requires --config)
   --config <path>   Configuration file path (required with --run-commands)
   --bck-username    myBeckhoff account email for proxy auth (env: BCK_USERNAME)
+  --version         Show version number
   --help            Show this help message
 
 Modes:
@@ -51,6 +53,7 @@ const { values, positionals } = parseArgs({
 		"use-proxy": { type: "boolean" },
 		"run-commands": { type: "boolean" },
 		"bck-username": { type: "string" },
+		version: { type: "boolean" },
 		help: { type: "boolean" }
 	},
 	strict: true,
@@ -61,6 +64,11 @@ const { values, positionals } = parseArgs({
 const host = positionals[2]; // [0]=bun, [1]=script.ts, [2]=host
 
 if (values.help) printHelp();
+
+if (values.version) {
+	console.log(packageJson.version);
+	process.exit(0);
+}
 
 // Check SSH client is installed
 if (!(await checkSshClientInstalled())) {
