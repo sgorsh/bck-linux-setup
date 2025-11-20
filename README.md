@@ -29,10 +29,16 @@ curl -fsSL https://bun.sh/install | bash
 powershell -c "irm bun.sh/install.ps1|iex"
 ```
 
-### Install/upgrade from GitHub
+### Install from GitHub
 
 ```bash
-bun install -g -f https://github.com/sgorsh/bck-linux-setup#v0.1.1
+bun install -g https://github.com/sgorsh/bck-linux-setup#v0.1.2
+```
+
+### Upgrade to Latest Version
+```bash
+bun remove -g bck-linux-setup
+bun install -g https://github.com/sgorsh/bck-linux-setup#v0.1.2
 ```
 
 ### Install from Source
