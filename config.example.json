@@ -1,0 +1,8 @@
+{
+	"username": "Administrator",
+	"useProxy": true,
+	"commands": [
+		"sudo apt update",
+		"sudo apt install -y tc31-xar-um"
+	]
+}

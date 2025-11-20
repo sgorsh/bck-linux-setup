@@ -1,0 +1,39 @@
+{
+	"name": "bck-linux-setup",
+	"version": "1.0.0",
+	"description": "CLI tool for executing commands on remote Beckhoff RT Linux® devices via SSH with APT proxy support",
+	"main": "src/index.ts",
+	"bin": {
+		"bck-linux-setup": "src/index.ts"
+	},
+	"type": "module",
+	"scripts": {
+		"start": "bun run src/index.ts",
+		"build": "bun build src/index.ts --compile --outfile dist/bck-linux-setup"
+	},
+	"keywords": [
+		"linux",
+		"ssh",
+		"apt",
+		"proxy",
+		"automation",
+		"plc",
+		"industrial"
+	],
+	"author": "",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sgorsh/bck-linux-setup.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sgorsh/bck-linux-setup/issues"
+	},
+	"engines": {
+		"bun": ">=1.3.0"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"typescript": "^5.0.0"
+	}
+}
