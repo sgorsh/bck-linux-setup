@@ -29,16 +29,18 @@ curl -fsSL https://bun.sh/install | bash
 powershell -c "irm bun.sh/install.ps1|iex"
 ```
 
+> Bun can also be downloaded as [standalone executable](https://github.com/oven-sh/bun/releases) without installation
+
 ### Install from GitHub
 
 ```bash
-bun install -g https://github.com/sgorsh/bck-linux-setup#v0.1.2
+bun install -g https://github.com/sgorsh/bck-linux-setup#v0.1.3
 ```
 
 ### Upgrade to Latest Version
 ```bash
 bun remove -g bck-linux-setup
-bun install -g https://github.com/sgorsh/bck-linux-setup#v0.1.2
+bun install -g https://github.com/sgorsh/bck-linux-setup#v0.1.3
 ```
 
 ### Install from Source
